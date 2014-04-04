@@ -26,13 +26,15 @@
 ?>
 <div class="header-container">
     <div class="header">
+      <!-- <img src="../skin/frontend/default/hellowired/images/background/heder_fon.png" class="topheader" /> -->
+      <!-- <div class="topheader"></div> -->
         <?php if ($this->getIsHomePage()):?> 
         <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else:?>
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
     
-    <div class="cms-links">
+    <!-- <div class="cms-links">
 	 <?php echo $this->getChildHtml('store_language') ?>
     <ul>
     <li class="welcome">
@@ -40,25 +42,37 @@
   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('toplinks')->toHtml() ?>  <?php echo $this->getChildHtml('store_language') ?>
     </ul>
     </div>
-       
+     -->   
        <div class="access">
           <?php echo $this->getChildHtml('topLinks') ?>
        </div>
        <div id="topmenu">
+          <div class="topheader"></div>
+          <div class="phone_img"></div>
+          <div class="phone_number">
+          <h2>
+    <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
+          </h2></div>
+        
          <?php echo $this->getChildHtml('topMenu') ?>
          <div class="clearfix"></div>
+        
        </div>
     </div>
 
-	 <div id="navigation">  
-   <h1>gg</h1>
+	 <!-- <div id="navigation">   -->
+   
 	<?php //echo $this->getChildHtml('topMenu') ?>
        <!-- <?php echo $this->getChildHtml('topSearch') ?> -->
 
     <?php //echo $this->getChildHtml('connect') ?>
     <!-- <div class="clearfix"></div> -->
-      </div> 
+      <!-- </div>  -->
 	<?php echo $this->getChildHtml('mobile-nav') ?>
     <?php echo $this->getChildHtml('topBar') ?>
     <?php //echo $this->getChildHtml('topContainer'); ?>
+    <div class="featured-social">
+     <?php echo $this->getChildHtml('news') ?>
+     <?php echo print_r(array_keys($this->getChild()),1);?>
+    </div>
 </div>
