@@ -34,15 +34,7 @@
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
     
-    <!-- <div class="cms-links">
-	 <?php echo $this->getChildHtml('store_language') ?>
-    <ul>
-    <li class="welcome">
-	<?php echo $this->getWelcome()?></li>
-  <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('toplinks')->toHtml() ?>  <?php echo $this->getChildHtml('store_language') ?>
-    </ul>
-    </div>
-     -->   
+   
        <div class="access">
           <?php echo $this->getChildHtml('topLinks') ?>
        </div>
@@ -53,27 +45,17 @@
           <h2>
     <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
           </h2></div>
-        
-         <?php echo $this->getChildHtml('topMenu') ?>
-         <div class="clearfix"></div>
-        
-       </div>
+          <div id="best_product">
+      <?php echo $this->getChildHtml('carusel') ?>
     </div>
-
-	 <!-- <div id="navigation">   -->
-   
-	<?php //echo $this->getChildHtml('topMenu') ?>
-       <!-- <?php echo $this->getChildHtml('topSearch') ?> -->
-
-    <?php //echo $this->getChildHtml('connect') ?>
-    <!-- <div class="clearfix"></div> -->
-      <!-- </div>  -->
-      <div id="best_product"><?php echo $this->getChildHtml('carusel') ?></div>
-      
-	<?php echo $this->getChildHtml('mobile-nav') ?>
+        <div id="TRE"><?php echo $this->getChildHtml('topMenu') ?></div>
+         
+        
+       </div>       
+    </div>
+    <?php //echo $this->getChildHtml('mobile-nav') ?>
     <?php echo $this->getChildHtml('topBar') ?>
-    <?php //echo $this->getChildHtml('topContainer'); ?>
-    <div class="featured-social">
-     <?php echo $this->getChildHtml('news') ?>
     </div>
-</div>
+     
+
+	 
