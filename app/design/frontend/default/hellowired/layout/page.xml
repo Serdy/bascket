@@ -84,6 +84,9 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>top-bar</value></action>
                     <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
                 </block>
+                <block type="catalog/product_list" name="carusel"  as="carusel" template="catalog/product/featured.phtml">
+                    <action method="setCategoryId"><category_id>52</category_id></action>
+                </block>
 				<block type="catalog/navigation" name="mobile-nav" as="mobile-nav" template="catalog/navigation/mobile-nav.phtml" />
                 <block type="page/html_wrapper" name="top.container" as="topContainer" translate="label">
                     <label>Page Header</label>
