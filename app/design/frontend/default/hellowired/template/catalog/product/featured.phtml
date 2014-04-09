@@ -47,7 +47,7 @@ $_productCollection = Mage::getResourceModel('catalog/product_collection')
 <?php else: ?>
 
 <?php // Grid Mode ?>
-
+<div class="carusel">
 
   <ul id="featured" class="jcarousel-skin-tango">
 
@@ -59,7 +59,7 @@ $_productCollection = Mage::getResourceModel('catalog/product_collection')
 
 			
              <li><a class="preview" rel="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(300, 300); ?>" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>">
-                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(105, 105); ?>" width="105" height="105" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
+                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(105, 85); ?>" width="105" height="85" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" />
                     </a> 
                     <h2 class="header-product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h2>
                     <?php echo $this->getPriceHtml($_product, true) ?>
@@ -74,5 +74,5 @@ $_productCollection = Mage::getResourceModel('catalog/product_collection')
 
 </ul>
 
-
+</div>
 <?php endif; ?>

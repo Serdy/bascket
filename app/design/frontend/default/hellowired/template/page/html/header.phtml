@@ -33,11 +33,10 @@
         <?php else:?>
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
-    
-   
        <div class="access">
           <?php echo $this->getChildHtml('topLinks') ?>
        </div>
+       <div class="search-header"><?php echo $this->getChildHtml('topSearch') ?></div>
        <div id="topmenu">
           <div class="topheader"></div>
           <div class="phone_img"></div>
@@ -45,10 +44,11 @@
           <h2>
     <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
           </h2></div>
-          <div id="best_product">
+         
+        <?php echo $this->getChildHtml('topMenu') ?>
+         
       <?php echo $this->getChildHtml('carusel') ?>
-    </div>
-        <div id="TRE"><?php echo $this->getChildHtml('topMenu') ?></div>
+    
          
         
        </div>       
@@ -58,4 +58,4 @@
     </div>
      
 
-	 
+     
