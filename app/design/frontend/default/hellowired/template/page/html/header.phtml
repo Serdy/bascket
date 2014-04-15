@@ -36,26 +36,22 @@
        <div class="access">
           <?php echo $this->getChildHtml('topLinks') ?>
        </div>
-       <div class="search-header"><?php echo $this->getChildHtml('topSearch') ?></div>
-       <div id="topmenu">
+        <div class="search-header">
+          <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+        <div id="topmenu">
           <div class="topheader"></div>
           <div class="phone_img"></div>
           <div class="phone_number">
-          <h2>
-    <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
-          </h2></div>
-         
-        <?php echo $this->getChildHtml('topMenu') ?>
-         
-      <?php echo $this->getChildHtml('carusel') ?>
-    
-         
-        
-       </div>       
-    </div>
-    <?php //echo $this->getChildHtml('mobile-nav') ?>
-    <?php echo $this->getChildHtml('topBar') ?>
+            <h2>
+              <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
+            </h2>
+          </div>
+          <?php echo $this->getChildHtml('topMenu') ?>
+          <?php echo $this->getChildHtml('carusel') ?>
+        </div>
+       </div>
     </div>
      
 
-     
+	 
