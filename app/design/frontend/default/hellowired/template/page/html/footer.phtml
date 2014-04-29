@@ -32,21 +32,22 @@
         
   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footerLinks')->toHtml() ?>
   
-        <div class="payment">
+        <!-- <div class="payment">
         <img src="<?php echo $this->getSkinUrl('images/creditcards.gif'); ?>" alt="We Accept all Major Credit Cards" />
         </div>
-            
+         -->    
         
-            <?php //echo $this->getChildHtml('cms_footer_links') ?>
+            <?php echo $this->getChildHtml('cms_footer_links') ?>
             <?php //echo $this->getChildHtml('footer_links') ?>
             <?php //echo $this->getChildHtml('newsletter') ?>
             <!--  -->
         </div>
        
     </div>
+    <div class="end"></div>
  
            
-</div>
+<!-- </div>
  <div class="copyright">
         <div class="f-left">
             <address><?php echo $this->getCopyright() ?></address></div>
@@ -56,3 +57,4 @@
             <div style="clear:both;"></div>
             </div>
   
+ -->
