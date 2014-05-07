@@ -1,19 +1,25 @@
 <?xml version="1.0"?>
 <package>
-    <name>RicoNeitzel_VertNav</name>
-    <version>0.4.2</version>
+    <name>Gala_Colorswatches</name>
+    <version>1.0.5</version>
     <stability>stable</stability>
-    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <license uri="http://galathemes.com/license.html">Commercial</license>
     <channel>community</channel>
     <extends/>
-    <summary>Vertical Navigation - drop in replacement for the horizontal  top navigation.</summary>
-    <description>Lots of css selectors available.</description>
-    <notes>New Portuguese Locale&#xD;
-New Feature: css-class for categories that have children</notes>
-    <authors><author><name>Vinai Kopp</name><user>auto-converted</user><email>vinai@netzarbeiter.com</email></author><author><name>Rico Neitzel</name><user>auto-converted</user><email>rico@buro71a.de</email></author></authors>
-    <date>2012-10-29</date>
-    <time>11:17:33</time>
-    <contents><target name="magecommunity"><dir name="RicoNeitzel"><dir name="VertNav"><dir name="Block"><file name="Navigation.php" hash="db893358e07f9a92174710c11800ab0d"/></dir><dir name="Helper"><file name="Data.php" hash="a3995193a1ce5560edbd95e11720ce8b"/></dir><dir name="Model"><dir name="System"><dir name="Config"><dir name="Source"><file name="Root.php" hash="20696bf2dfef3e1092d7c08caf1dbc8e"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="45a103c503a11e0c3685da28d34eb627"/><file name="system.xml" hash="4ae9f6be51baf3be807fab03f52625db"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="RicoNeitzel_VertNav.xml" hash="227d7980c24ebd629e1c1d4f10b8c62c"/></dir></target><target name="magelocale"><dir name="de_DE"><file name="RicoNeitzel_VertNav.csv" hash="d32b98f21146e2799b1dad8af8b57673"/></dir><dir name="es_MX"><file name="RicoNeitzel_VertNav.csv" hash="54b83643165bc5b72ca8ce2122fd5422"/></dir><dir name="pr_BR"><file name="RicoNeitzel_VertNav.csv" hash="73caa100514b6da6e311b1aaed889943"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="vertnav.xml" hash="57d3edf9bcf781eb7156d85173e4f3e8"/></dir><dir name="template"><dir name="vertnav"><file name="left.phtml" hash="e2f0d7e286ad1d3caadd4892fbb0671f"/></dir></dir></dir></dir><dir name="default"><dir name="default"><dir name="layout"><file name="vertnav.xml" hash="57d3edf9bcf781eb7156d85173e4f3e8"/></dir><dir name="template"><dir name="vertnav"><file name="left.phtml" hash="e2f0d7e286ad1d3caadd4892fbb0671f"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="vertnav.css" hash="48ed54348eefcc8e1e0286feb84cbe4e"/></dir></dir></dir><dir name="default"><dir name="default"><dir name="css"><file name="vertnav.css" hash="48ed54348eefcc8e1e0286feb84cbe4e"/></dir></dir></dir></dir></target></contents>
+    <summary>Gala Color Swatches Magento Extension</summary>
+    <description>Color Swatches Magento Extensions, transform drop-down custom options to swatches, it supports all type of products such as simple product, configurable products...</description>
+    <notes>Version 1.0.5 - 03/21/2012
+- Fixed IE did not show swatches.
+
+Ver 1.0.4 - 09/20/2011
+- Added CSS
+- Fixed IE js error
+
+First Release - 09/02/2011</notes>
+    <authors><author><name>galathemes</name><user>auto-converted</user><email>contact@galathemes.com</email></author></authors>
+    <date>2012-03-21</date>
+    <time>07:14:06</time>
+    <contents><target name="magemedia"><dir name="colors_watches"><file name="9.jpg" hash="f836843f7c41cfcbc3bb9ad060340d3d"/><file name="10.jpg" hash="682a217b52553b0b836bb670393ab07c"/><file name="11.jpg" hash="3a4f381f2c63cb74d44833345d9e7587"/><file name="12.jpg" hash="50071c7dcc1f1d06ace20eee30ad00b0"/><file name="95.jpg" hash="1ca78c083d6445af4907e5a03eb17bfa"/><file name="105.jpg" hash="f5e2faba89dcda154f57db8f0a5458f0"/><file name="color-black.png" hash="b7e2043b596a4c16e98394e5e0e0bb61"/><file name="color-yellow.png" hash="b7e2043b596a4c16e98394e5e0e0bb61"/></dir></target><target name="magecommunity"><dir name="EM"><dir name="Colorswatches"><dir name="Block"><file name="Settings.php" hash="934e26bae7e4eb8c485d9e1624e912ef"/></dir><dir name="etc"><file name="config.xml" hash="42ac94059dc34cfdd7187b8f36abc496"/><file name="system.xml" hash="06ea7e33de7cfd4bcfd802f18cda1eec"/></dir><dir name="Helper"><file name="Data.php" hash="e90743912e617d9a91f9e94fa97eb6fc"/></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="em_colorswatches.css" hash="525694144497b548902e7ddfe2389c14"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="em_colorswatches.xml" hash="005523237754c4e581cea60b7b808b65"/></dir><dir name="template"><dir name="em_colorswatches"><file name="settings.phtml" hash="9786e41b059f41a3cb68c3ffa5c0a434"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="EM_Colorswatches.xml" hash="28c2dfd0b5e565ee1765e6f9fd29e7a0"/></dir></target></contents>
     <compatible/>
     <dependencies/>
 </package>

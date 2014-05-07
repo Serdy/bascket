@@ -51,15 +51,24 @@
             <div class="product-name">
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
+            <div class="product-img-box">
+            <?php echo $this->getChildHtml('media') ?>
+            </div> 
+            <?php echo $this->getChildHtml('product_type_data') ?>
+            <?php echo $this->getChildHtml('upsell_products') ?>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
 
-            <?php if ($this->canEmailToFriend()): ?>
+            <?php endif;?>
+           <!--  <?php if ($this->canEmailToFriend()): ?>
                 <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
             <?php endif; ?>
 
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?> -->
             <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?>
+            
             <?php echo $this->getTierPriceHtml() ?>
+
 
             <?php if (!$this->hasOptions()):?>
                 <div class="add-to-box">
@@ -69,10 +78,11 @@
                             <span class="or"><?php echo $this->__('OR') ?></span>
                         <?php endif; ?>
                     <?php endif; ?>
-                    <?php echo $this->getChildHtml('addto') ?>
+
+                    <?php //  добавить к сравнению echo $this->getChildHtml('addto') ?>
                 </div>
             <?php else:?>
-                <?php echo $this->getChildHtml('addto') ?>
+                <?php //  добавить к сравнению echo $this->getChildHtml('addto') ?>
             <?php endif; ?>
 
             <?php if ($_product->getShortDescription()):?>
@@ -90,14 +100,10 @@
 
         </div>
 
-        <div class="product-img-box">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
+        
 
         <div class="clearer"></div>
-        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-        <?php endif;?>
+       
     </form>
     <script type="text/javascript">
     //<![CDATA[
@@ -112,7 +118,7 @@
     </div>
 
     <div class="product-collateral">
-        <?php echo $this->getChildHtml('info_tabs') ?>
-        <?php echo $this->getChildHtml('product_additional_data') ?>
+        <?php  echo $this->getChildHtml('info_tabs') ?>
+        <?php //echo $this->getChildHtml('product_additional_data') ?>
     </div>
 </div>
