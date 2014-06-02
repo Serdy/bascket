@@ -33,17 +33,28 @@
 ?>
 <?php $_menu = ''?>
 <?php foreach ($this->getStoreCategories() as $_category): ?>
+    <?php 
+    if ($_category->getName() == "left-menu") {
+        break;
+    }?>
     <?php $_menu .= $this->drawItem($_category) ?>
 <?php endforeach ?>
+
 <?php if ($_menu): ?>
 <div class="nav-container">
     <ul id="nav">
-         <?php $_anyActive = false; foreach ($this->getStoreCategories() as $_category) { $_anyActive = $_anyActive || $this->isCategoryActive($_category); } ?>
+         <?php 
+         $_anyActive = false; 
+         foreach ($this->getStoreCategories() as $_category) {
+ 		     $_anyActive = $_anyActive || $this->isCategoryActive($_category); 
+          } ?>
          <!-- <li class="home <?php echo !$_anyActive ? 'active' : '' ?>"><a href="<?php echo $this->getUrl('')?>"> -->
          <!-- <span><?php echo $this->__('Home') ?></span> -->
          <!-- </a></li>  -->
     
         <?php echo $_menu; ?>
+
+
     </ul>
 </div>
 <?php endif; ?>

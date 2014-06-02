@@ -1,0 +1,85 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    RicoNeitzel
+ * @copyright  Copyright (c) 2009 Vinai Kopp http//netzarbeiter.com/
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php 
+/**
+ * Left menu for store
+ *
+ * @see RicoNeitzel_VertNav_Block_Navgation
+ * @see Mage_Catalog_Block_Navigation
+ */
+?>
+<div class="block block-leftnav ">
+<div class="block-title">
+    <strong><span>МАГАЗИН</span></strong>
+    </div></div>
+<div id="nav-container-left">
+    <ul id="nav-left">
+    <!-- tom menu -->
+  
+<!-- try ageny -->
+
+<?php foreach ($this->getStoreCategories() as $default_category): ?>
+            <?php if ($default_category->getUrlKey() == 'left-menu') :?>
+            <?php foreach ($default_category->getChildren() as $_category): ?>
+                 <?php echo $this->drawItem($_category) ?>
+            <?php endforeach; ?>
+            <?php endif; ?>
+         <?php endforeach ?>
+    <!-- END top menu -->
+<?php
+//$root_category = Mage::getModel('catalog/category')->load(5); // Put   your ro t category ID here.
+//$subcategories = $root_category->getChildren();
+?>
+<?php
+  foreach(explode(',',$subcategories) as $subcategory) {
+        $category = Mage::getModel('catalog/category')->load($subcategory);
+        $i++;
+        echo '<div id="nav-container-pand"></div>';
+        echo '<li class="leftlevel0 nav-'.$i.'">';
+        echo '<a href="'.$category->getURL() .'" />'.$category->getName().'</a>';
+        $submenu = $category->getChildren();
+        if ($submenu) {
+               echo'<ul class="level0">';
+                foreach(explode(',',$submenu) as $subcategory) {
+                $category = Mage::getModel('catalog/category')->load($subcategory);
+                $nav2++;
+                echo '<li class="level1 nav-'.$i.'-'.$nav2.'">';
+                echo '<a href="'.$category->getURL() .'" />'.$category->getName().'</a>';
+                echo '</li>';
+                       }
+
+                echo '</ul>';
+                echo '</li>';
+            }    
+        
+        echo '</li>';
+
+    }
+  ?>
+  
+</ul>  
+</div>

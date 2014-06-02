@@ -5,7 +5,7 @@
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with  in the file LICENSE_AFL.txt.
+ * that is bundled with this package in the file LICENSE_AFL.txt.
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/afl-3.0.php
  * If you did not receive a copy of the license and are unable to
@@ -15,7 +15,7 @@
  * DISCLAIMER
  *
  * Do not edit or add to this file if you wish to upgrade Magento to newer
- * versions 
+ * versions in the future. If  you wish to customize Magento for your
  * needs please refer to http://www.magentocommerce.com for more information.
  *
  * @category    design
@@ -33,45 +33,26 @@
         <?php else:?>
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
-    
-    <!-- <div class="cms-links">
-	 <?php echo $this->getChildHtml('store_language') ?>
-    <ul>
-    <li class="welcome">
-	<?php echo $this->getWelcome()?></li>
-  <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('toplinks')->toHtml() ?>  <?php echo $this->getChildHtml('store_language') ?>
-    </ul>
-    </div>
-     -->   
        <div class="access">
           <?php echo $this->getChildHtml('topLinks') ?>
        </div>
-       <div id="topmenu">
+        <div class="search-header">
+          <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+        <div id="topmenu">
           <div class="topheader"></div>
           <div class="phone_img"></div>
           <div class="phone_number">
-          <h2>
-    <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
-          </h2></div>
-        
-         <?php echo $this->getChildHtml('topMenu') ?>
-         <div class="clearfix"></div>
-        
+            <h2>
+              <?php echo Mage::getStoreConfig('general/store_information/phone'); ?>
+            </h2>
+          </div>
+          <?php echo $this->getChildHtml('topMenu') ?>
+          <?php echo $this->getChildHtml('carusel') ?>
+          <div><?php echo $this->getChildHtml('product_list') ?></div>
+        </div>
        </div>
     </div>
+     
 
-	 <!-- <div id="navigation">   -->
    
-	<?php //echo $this->getChildHtml('topMenu') ?>
-       <!-- <?php echo $this->getChildHtml('topSearch') ?> -->
-
-    <?php //echo $this->getChildHtml('connect') ?>
-    
-      <!-- </div>  -->
-	<?php echo $this->getChildHtml('mobile-nav') ?>
-    <?php echo $this->getChildHtml('topBar') ?>
-    <?php //echo $this->getChildHtml('topContainer'); ?>
-    <div class="featured-social">
-     <?php echo $this->getChildHtml('news') ?>
-    </div>
-</div>
