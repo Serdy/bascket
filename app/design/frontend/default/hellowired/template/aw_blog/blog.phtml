@@ -1,0 +1,37 @@
+<?php $posts = $this->getPosts(); ?>
+<div id="messages_product_view">
+    <?php Mage::app()->getLayout()->getMessagesBlock()->setMessages(Mage::getSingleton('customer/session')->getMessages(true)); ?>
+    <?php echo Mage::app()->getLayout()->getMessagesBlock()->getGroupedHtml(); ?>
+</div>
+<div class="blog">
+<?php foreach ($posts as $post): ?>
+    <?php 
+        $postid[] = $post->getID();
+        $lastid = max($postid);
+    ?>
+    <?php endforeach; ?>   
+
+
+    <?php foreach ($posts as $post): ?>
+    
+         <?php if ($lastid == $post->getID()):?>
+            <div class="lastpostWrapper"> 
+            <div class="postTitle">
+            <h2><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
+        </div>
+        <div class="postContent"><?php echo $post->getPostContent(); ?></div>
+    </div>
+        <?php else :?>
+    <div class="postWrapper">
+        <div class="postTitle">
+            <h3><?php echo $post->getCreatedTime(); ?></h3>
+            <h2><a href="<?php echo $post->getAddress(); ?>" ><?php echo $post->getTitle(); ?></a></h2>
+        </div>
+        <?php echo $this->getBookmarkHtml($post) ?>
+        <div class="tags"><?php echo $this->getTagsHtml($post) ?></div>
+        <div class="postDetails"></div>
+    </div>
+<?php endif;?>    
+<?php endforeach; ?>
+</div>
+<div style="clear:both"></div>
