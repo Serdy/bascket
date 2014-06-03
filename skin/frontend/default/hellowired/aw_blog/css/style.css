@@ -4,15 +4,20 @@
     float: left;
     width: 65%;
 }*/
-
+.postWrapper {
+    border-bottom: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #bab8b8;
+    padding: 5px;
+}
 
 /*LAST POST*/
-.lastpostWrapper {
+.blog .lastpostWrapper {
     width: 43%;
     float: left;
     background-color: #FFFFFF;
 }
-.lastpostWrapper img {
+.blog .lastpostWrapper img {
 
     width: 230px;
 
@@ -23,7 +28,7 @@
     padding: 5px;
 }
 
-.postWrapper {
+.blog .postWrapper {
     border-bottom: 1px;
     border-bottom-style: dotted;
     border-bottom-color: #bab8b8;
