@@ -101,7 +101,7 @@ ul,ol         { list-style:none; }
 /* Layout ================================================================================ */
 .page { 
     margin:0px auto; 
-    text-align:left; 
+    text-align:justify; 
     /*padding: 0px 0px 20px 0px; */
     
 
@@ -133,7 +133,7 @@ ul,ol         { list-style:none; }
 
 /* 3 Columns Layout */
 .col3-layout .col-main { 
-    width:560px; 
+    width:558px; 
     margin-left: 5px;
      }
 .col3-layout .col-right { 
@@ -383,7 +383,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
     font-size:1.8em; 
     font-weight:bold; 
     line-height:1.25;
-    padding: 5px;
+    padding: 4px;
     padding-left: 15px;
 
 }
@@ -1378,7 +1378,7 @@ nav li.over > ul {
     font-size:1.8em; 
     font-weight:bold; 
     line-height:1.25;
-    padding: 5px;
+    padding: 4px;
     padding-left: 15px; 
 }
 .category-image { width:100%; overflow:hidden; margin:0 0 10px; text-align:center; }
@@ -1750,8 +1750,9 @@ f/********** Product Prices > */
 }
 .product-tabs li.last { border-right:0; }
 .product-tabs a { 
+    text-align: center;
     display:block; 
-    padding:6px 10px; 
+    padding:6px 5px; 
     color: #FFFFFF;
 }
 .product-tabs a:hover { 
@@ -1854,6 +1855,14 @@ f/********** Product Prices > */
 
 
 /* Content Styles ================================================================= */
+.content {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #f0571f;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+ 
+}
 .product-name { margin:0; font-size:1em; font-weight:normal; line-height:1.55; }
 /*.product-name a { color:#444; }*/
 

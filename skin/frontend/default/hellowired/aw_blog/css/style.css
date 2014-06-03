@@ -59,10 +59,16 @@
     padding-right: 3px;
 }
 .Post {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f0571f;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius:  5px;
     background-color: #FFFFFF;
+    padding: 5px;
 }
 .Post  img {
-    width: 560px;
+    width: 546px;
 }
 .Post .postTitle {
     margin: 0 0 7px;
@@ -73,8 +79,11 @@
 .Post .postTitle h2{
     color: #FFFFFF;
     padding: 5px 5px 0px;
+    text-align: left;
 }
-
+.Post iframe{
+    margin-left: 60px;
+}
 /*END*/
 /*.postTitle {
     border-bottom-width: 1px;
