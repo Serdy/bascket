@@ -1904,7 +1904,16 @@ f/********** Product Prices > */
 
 
 /* Shopping Cart ========================================================================= */
-.cart .page-title {}
+
+.cart {
+    border: 2px solid #f0571f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cart .page-title {
+    background: #f0571f;
+}
 
 /* Checkout Types */
 .cart .page-title .checkout-types { display:none !important; }
@@ -1916,7 +1925,15 @@ f/********** Product Prices > */
 .cart-table .item-msg { margin:5px 0; font-size:11px; font-weight:bold; color:#df280a; }
 .cart-table tfoot td { padding:5px 10px; }
 .cart-table .btn-continue { float:left; }
-.cart-table .btn-continue span { background:none; padding:0; font:normal 11px/25px Arial, Helvetica, sans-serif; color:#4f8100; text-transform:none; text-decoration:underline; }
+.cart-table .btn-continue span { 
+    background:none; 
+    padding:0px 5px 0px 5px; 
+    font:normal 11px/25px Arial, Helvetica, sans-serif; 
+    color:#fff; 
+    font: bold 11px/25px Tahoma, Verdana, Arial, sans-serif;
+    /*text-transform:none; 
+    text-decoration:underline; */
+}
 .cart-table .btn-continue span span { text-shadow: none !important; }
 .cart-table .btn-continue:hover span { text-decoration:none; }
 .cart-table .btn-update span {}
@@ -1965,7 +1982,13 @@ f/********** Product Prices > */
 .cart .shipping .form-list select { width:225px; }
 
 /* Shopping Cart Totals */
-.cart .totals { background:#fff url(../images/bkg_cart-totals.gif) 0 0 no-repeat;float: right;padding: 12px 0;width: 655px;}
+.cart .totals { 
+    background:#fff ;
+    /*url(../images/bkg_cart-totals.gif) 0 0 no-repeat;*/
+    float: right;
+    padding: 12px 9px;
+    width: 655px;
+}
 .cart .totals table { float:right; width:400px; margin:0 0 8px; }
 .cart .totals td { padding:0 0 0 15px; }
 .cart .totals tr.last td {}

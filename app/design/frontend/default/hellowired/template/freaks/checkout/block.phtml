@@ -5,7 +5,7 @@
         <li <?php if ($isLoggedIn): ?> class="current"<?php endif ?>><a href="#<?php echo $isLoggedIn ? 'registered-user' : 'login' ?>"><?php echo $this->__('Registered') ?></a></li>
         <li class="clear"></li>
     </ul>
-    <div class="clear"></div>
+    <!-- <div class="clear"></div> -->
     <?php if (!$isLoggedIn): ?><div class="tab-cont new-user">
         <?php echo $this->getLoginMessagesBlock()->getGroupedHtml() ?>
         <?php echo $this->getChildHtml('fi_checkout_user_block') ?>
@@ -16,6 +16,7 @@
             <?php echo $this->getChild('fi_checkout_user_block')->setFilled(true)->toHtml() ?>
         <?php else: ?>
             <form id="checkout-login-form" action="<?php echo $this->getLoginUrl() ?>" method="post">
+                <?php echo $this->getBlockHtml('formkey'); ?>
                 <div class="field">
                     <label><?php echo $this->__('Login') ?></label>
                     <input type="text" name="login[username]" class="input-text required-entry validate-email" />

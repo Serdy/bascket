@@ -77,10 +77,10 @@ $isLocationAsOneField = $this->helper('fi_checkout')->isLocationAsOneField();
                         </div>
                     <?php endif ?>
                     <div class="clear"></div>
-                    <div class="f-left">
+                    <!-- <div class="f-left">
                         <input type="text" name="user[address][postcode]" class="input-text postcode non-storable" value="<?php echo $this->htmlEscape($this->getCustomerZip()) ?>" />
                         <p class="help"><?php echo $this->helper('checkout')->__('Zip/Post') ?></p>
-                    </div>
+                    </div> -->
                     <div class="f-left no-mr">
                         <input type="text" name="user[address][city]" class="input-text required-entry w-244" value="<?php echo $this->htmlEscape($this->getCustomerCity()) ?>" />
                         <p class="help"><?php echo $this->helper('checkout')->__('City') ?>*</p>
